@@ -1,7 +1,7 @@
-@Aplicabilidades
+@Aplicabilidades @T1802
 Feature: Alteração no ponto de controle _RPA - RNCR-1802
     
-    @T1802
+    
     Scenario Outline: Teste de Aplicabilidade - <NOMECATEGORIA>
         Given que o operador abra um incidente novo com a categoria "<IDCATEGORIA>"
         And o pedido está com o status da restituição = Erro no Processamento
@@ -19,5 +19,5 @@ Feature: Alteração no ponto de controle _RPA - RNCR-1802
 |Reclamação > Análise de crédito e fraude* > Reclamação sobre análise de crédito*   |     3590   |Pedido cancelado (Sistêmico)*|
 |Reclamação > Entrega >	Reclamação sobre atraso*                                    |     3592   |Pedido cancelado (Sistêmico)*|
 |Reclamação > Financeiro > Reclamação sobre atraso na devolução de valores*         |     1417   |Pedido cancelado (Sistêmico)*|
-|Informação > Reversa (Coleta) > Informações sobre a coleta*                        |     3598   |Pedido cancelado (Sistêmico)*|
+|Informação > Reversa (Coleta) > Informações sobre a coleta*                        |     3589   |Pedido cancelado (Sistêmico)*|
 |Informação > Análise de crédito e fraude* > Informações sobre a análise de crédito*|     3586   |Pedido cancelado (Sistêmico)*|
