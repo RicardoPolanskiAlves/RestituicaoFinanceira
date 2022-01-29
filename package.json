@@ -8,7 +8,14 @@
     "deploy": "npm run build&&gh-pages -d build",
     "build": "npm start",
     "cypress:run": "cypress run ",
-    "postcypress:run": "node ./cypress/support/cucumber-html-reporter.js"
+    "cypress:cypress-tags": "cypress-tags ",
+    "postcypress:run": "node ./cypress/support/multiple-cucumber-html-reporter.js",
+    "cypress:open": "cypress open ",
+    "postcypress:open": "node ./cypress/support/multiple-cucumber-html-reporter.js",
+    "postcypress:cypress-tags": "node ./cypress/support/multiple-cucumber-html-reporter.js",
+    "cy:tag:aplicabilidades": "npx cypress-tags run TAGS='@Aplicabilidades'",
+    "cy:regression": "npx cypress-tags run TAGS='@Aplicabilidades'",
+    "cy-tags": "npx cypress-tags run TAGS="
   },
   "keywords": [],
   "author": "",
@@ -21,15 +28,15 @@
   "dependencies": {
     "cucumber": "^7.0.0-rc.0",
     "cypress": "^9.1.1",
-    "cypress-tags": "^0.3.0"
+    "cypress-tags": "^0.3.0",
+    "multiple-cucumber-html-reporter": "^1.18.3"
   },
   "cypress-cucumber-preprocessor": {
-    "step_definitions": "cypress/support/steps",
+    "step_definitions": "cypress/integration/tests/steps",
     "cucumberJson": {
       "generate": true,
       "outputFolder": "cypress/cucumber-json",
-      "filePrefix": "",
-      "fileSuffix": ".json"
+      "filePrefix": ""
     }
   }
 }

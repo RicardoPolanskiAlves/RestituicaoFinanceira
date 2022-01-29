@@ -1,7 +1,7 @@
 /* global Given, Then, When */
 
-import * as getMatriz from '../../requests/GETMatrizAplicabiliade_tst3'
-import * as getPedidos from '../../requests/Pedidos-Jtrach'
+import * as getMatriz from '../../requests/GETMatrizAplicabiliade'
+//import * as getPedidos from '../../requests/GETPedidos'
 
 const param = '1'
 const idCategoria = '2851'
@@ -27,19 +27,19 @@ And(/^a forma de restituição é Ordem de pagamento$/, () => {
 
 Then(/^deve encontrar o ID "([^"]*)"$/, (ID) => {
 
-    getPedidos.getPedidos(idPedido).should((response) => {
+ /*    getPedidos.getPedidos(idPedido).should((response) => {
         expect(response.status).to.eq(200);
         expect(JSON.stringify(response.body.pedido.entregas.filter(pegaCan)[0].trackings.find((x) => {
             return x.pontoControle.idPontoControle == "CAN"
         }))).to.contains("CAN")
 
-        /*       cy.log(JSON.stringify(response.body.pedido.entregas.filter(pegaCan)[0].trackings.find((x) => {
+               cy.log(JSON.stringify(response.body.pedido.entregas.filter(pegaCan)[0].trackings.find((x) => {
                   return x.pontoControle.idPontoControle == "CAN"
-              }))) */
-        //expect(response.body.pedido.idPedido).to.eq(idPedido)
-    })
+              }))) 
+        expect(response.body.pedido.idPedido).to.eq(idPedido)
+    }) */
 
-    getMatriz.getAplicabilidade(param, idCategoria, idPedido, idEntrega).should((response) => {
+    getMatriz.getAplicabilidadeTst3(param, idCategoria, idPedido, idEntrega).should((response) => {
         expect(response.status).to.eq(200);
         cy.log(response.body.DataHora)
 

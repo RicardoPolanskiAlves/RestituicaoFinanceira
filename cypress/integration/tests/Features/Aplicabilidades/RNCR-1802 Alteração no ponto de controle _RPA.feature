@@ -1,4 +1,4 @@
-@Aplicabilidades @T1802
+@Aplicabilidades @T1802 @ritm
 Feature: Alteração no ponto de controle _RPA - RNCR-1802
     
     
@@ -6,7 +6,7 @@ Feature: Alteração no ponto de controle _RPA - RNCR-1802
         Given que o operador abra um incidente novo com a categoria "<IDCATEGORIA>"
         And o pedido está com o status da restituição = Erro no Processamento
         And a forma de restituição é Ordem de pagamento
-        Then deverá encontrar o ID "<ID>" para a "<IDCATEGORIA>"
+        Then deve encontrar o ID "<ID>"
 
     Examples:
 |                                 NOMECATEGORIA                                     | IDCATEGORIA|              ID             |

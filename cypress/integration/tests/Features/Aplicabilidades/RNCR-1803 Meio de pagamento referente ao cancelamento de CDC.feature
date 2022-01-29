@@ -1,12 +1,11 @@
-@Aplicabilidades
+@Aplicabilidades @T1803 @ritm
 Feature: Meio de pagamento referente ao cancelamento de CDC - RNCR-1803
     
-    @T1803 
     Scenario Outline: Teste de Aplicabilidade - <NOMECATEGORIA>
-        Given que o operador crie um protocolo novo com a categoria "<IDCATEGORIA>"
+        Given que o operador crie um protocolo novo com a categoria "<IDCATEGORIA>" para o pedido "304258681"
         And o pedido tenha sido pago com CDC e boleto
-        And o status seja Cancelado e ponto de controle = DVC
-        Then o protocolo deve encontrar o ID "<ID>" para a "<IDCATEGORIA>"
+        And o status da entrega "30425868102" seja Cancelado e ponto de controle = DVC
+        Then o protocolo deve encontrar o ID "<ID>"
 
 
 Examples:

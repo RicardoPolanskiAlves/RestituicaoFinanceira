@@ -1,7 +1,7 @@
 /* global Given, Then, When */
 
-import * as getMatriz from '../../requests/GETMatrizAplicabiliade_tst2'
-import * as getPedidos from '../../requests/Pedidos-Jtrach'
+//import * as getMatriz from '../../requests/GETMatrizAplicabiliade'
+//import * as getPedidos from '../../requests/GETPedidos'
 
 const param = '1'
 //const idCategoria = '1417'
@@ -14,18 +14,19 @@ Given(/^que o operador abra um incidente novo com a categoria "([^"]*)"$/, (ID) 
 	return true;
 });
 
-(/^o pedido está com o status da restituição = Erro no Processamento$/, () => {
+And(/^o pedido está com o status da restituição = Erro no Processamento$/, () => {
 	return true;
 });
 
-(/^a forma de restituição é Ordem de pagamento$/, () => {
+And(/^a forma de restituição é Ordem de pagamento$/, () => {
 	return true;
 });
 
 
 
-Then(/^deverá encontrar o ID "([^"]*)" para a "([^"]*)"$/, (ID, idCategoria) => {
+/* Then(/^deverá encontrar o ID "([^"]*)" para a "([^"]*)"$/, (ID, idCategoria) => {
 
+    
 	getMatriz.getAplicabilidade(param, idCategoria, idPedido, idEntrega).should((response) => {
          expect(response.status).to.eq(200);
         
@@ -34,4 +35,4 @@ Then(/^deverá encontrar o ID "([^"]*)" para a "([^"]*)"$/, (ID, idCategoria) =>
         //expect(response.body.idProduto).to.eq(3681);  
         expect(response.body.nomeProduto).to.eq(ID)
     })
-});
+}); */

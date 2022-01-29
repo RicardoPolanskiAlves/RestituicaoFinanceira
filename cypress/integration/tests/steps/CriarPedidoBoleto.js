@@ -6,7 +6,7 @@ const pageObjects = new PageObjects
 
 
 Given(/^que o usuário acesso o website "([^"]*)"$/, (webSite) => {
-	pageObjects.accessSite('https://carrinho.pontofriointegracaooffline.net/?idSku=2532525')
+	pageObjects.accessSite(webSite)
 });
 
 Then(/^insira o CEP "([^"]*)"$/, (cepField) => {

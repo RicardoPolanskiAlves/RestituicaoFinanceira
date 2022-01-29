@@ -1,19 +1,19 @@
-import {
+/* import {
     expect
 } from "chai";
 
-
-Given(/^que seja acessado o LF Cancelamento$/, () => {
+ */
+/* Given(/^que seja acessado o LF Cancelamento$/, () => {
     cy.viewport(1360, 768)
     cy.visit("http://rightnow-sit.viavarejo.com.br:8084/lookfeel-restituicao-tst3/cancelamento?idContato=8515177&idIncidenteOrigem=27651250&unidadeNegocio=1&idPedido=500579621&idEntrega=50057962101&origem=AddIn&skus=&idCategoria=3632&indicadorRestituicaoTotalProRata=False")
     cy.get('button[class="btn lf-button-padrao next-step"]').should('be.visible').first().click()
 });
-
-Then(/^selecione o produto e a quantidade$/, () => {
+ */
+/* Then(/^selecione o produto e a quantidade$/, () => {
     cy.get('input[type="checkbox"]').should('be.visible').click()
     cy.get('select[class="quantidade-sku form-control input-xs obrigatorio"]').should('be.visible').select(1)
 
-    cy.screenshot('Seleciona produto para cancelar', {overwrite: true})
+    //cy.screenshot('Seleciona produto para cancelar', {overwrite: true})
     cy.get('[class="tab-pane active"][id^="step"]', {
         timeout: 12000
     }).find('.btn.lf-button-padrao.next-step').click({
@@ -24,7 +24,7 @@ Then(/^selecione o produto e a quantidade$/, () => {
     }).should('be.visible'))
     
 });
-
+ */
 
 
 
@@ -50,7 +50,7 @@ Then(/^selecione o produto e a quantidade$/, () => {
         timeout: 6000000
     }).should('be.visible')) */
 
-Then(/^selecione Restituição Simpes$/, () => {
+Then(/^seleciosne Restituição Simpes$/, () => {
 
     /* Verifica se existe botão Restituição Simples */
     expect(cy.get('button[onclick="restituicaoSimplesMaisOpcoes()"]', {
@@ -76,7 +76,7 @@ Then(/^selecione Restituição Simpes$/, () => {
     })
 });
 
-Then(/^selecione Crédito em Conta Corrente$/, () => {
+Then(/^seleciones Crédito em Conta Corrente$/, () => {
 
     /* Verifica se os botões tem o mesmo tamanho */
 
@@ -100,7 +100,7 @@ Then(/^selecione Crédito em Conta Corrente$/, () => {
     cy.screenshot('Tela Restituição Conta Corrente', {overwrite: true})
 });
 
-Then(/^selecione um conta do Histórico de Dados Bancários com Restituição Confirmada$/, () => {
+Then(/^seleciones um conta do Histórico de Dados Bancários com Restituição Confirmada$/, () => {
 
 
     /* Verifica se há histórico de restituição confirmada */
@@ -160,18 +160,18 @@ When(/^clicar em Continuar$/, () => {
     //cy.screenshot({overwrite: true})
 });
 
-When(/^inserir os dados obrigatórios e clicar em Continuar$/, () => {
+When(/^inserirs os dados obrigatórios e clicar em Continuar$/, () => {
     return true;
 });
 
-Then(/^será exibido os dados referente ao cancelamento$/, () => {
+Then(/^será exibidos os dados referente ao cancelamento$/, () => {
     return true;
 });
 
-When(/^clicar em Finalizar$/, () => {
+When(/^clicars em Finalizar$/, () => {
     return true;
 });
 
-Then(/^o pedido será cancelado$/, () => {
+Then(/^o pedidos será cancelado$/, () => {
     return true;
 });

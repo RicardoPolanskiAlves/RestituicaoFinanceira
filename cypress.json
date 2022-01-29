@@ -3,8 +3,15 @@
   "baseUrl": "http://rightnow-hlg.novapontocom.com.br:85/integrador-tst3/api/v1.0/",
   "video": false,
   "retries": {
-    "runMode": 2,
+    "runMode": 0,
     "openMode": 1
   },
-  "projectId": "9s3ig2"
+  "projectId": "9s3ig2",
+  "env": {
+    "CancelamentoTST3": "http://rightnow-sit.viavarejo.com.br:8084/lookfeel-restituicao-tst3/cancelamento",
+    "integradorTst2": "http://rightnow-hlg.novapontocom.com.br:85/integrador-tst2/api/v1.0/",
+    "integradorTst3": "http://rightnow-hlg.novapontocom.com.br:85/integrador-tst3/api/v1.0/",
+    "integradorMock": "http://rightnow-hlg.novapontocom.com.br:85/integrador-mock/api/v1.0/",
+    "pedidosMock": "http://rightnow-hlg.novapontocom.com.br:85/wiremock/pedidos/{IdPedido}?idPedido="
+  }
 }
