@@ -1,7 +1,6 @@
 # GitHub Actions
 # https://help.github.com/en/articles/configuring-a-workflow
 name: Cypress tests
-
 on: 
   push:
       - Teste
@@ -15,7 +14,7 @@ jobs:
     - uses: actions/checkout@master
 
     # install a specific version of Node using
-    # https://github.com/actions/setup-node
+    # https://github.com/actions/setup-nodeq
     - name: Use Node.js v12
       uses: actions/setup-node@v1
       with:
