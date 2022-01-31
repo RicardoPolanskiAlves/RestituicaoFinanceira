@@ -4,7 +4,7 @@ name: Cypress tests
 
 on: 
   push:
-      - main
+      - Teste
 
 
 jobs:
