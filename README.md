@@ -1,1 +1,1 @@
-# RestituicaoFinanceira
+[![Cypress tests](https://github.com/RicardoPolanskiAlves/RestituicaoFinanceira/actions/workflows/main.yml/badge.svg)](https://github.com/RicardoPolanskiAlves/RestituicaoFinanceira/actions/workflows/main.yml)
