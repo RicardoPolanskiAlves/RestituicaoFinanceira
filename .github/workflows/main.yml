@@ -1,7 +1,7 @@
 # GitHub Actions
 # https://help.github.com/en/articles/configuring-a-workflow
 name: Cypress tests
-on
+on:
   push:
     branches:
       - Teste
