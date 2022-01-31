@@ -8,3 +8,4 @@ reports/
 videos/
 screenshots/
 cypress/cucumber-json/
+.gitignore
