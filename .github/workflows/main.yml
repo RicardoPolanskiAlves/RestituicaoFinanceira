@@ -7,7 +7,6 @@ on:
     branches:
       - Teste
 
-
 jobs:
   test1:
     name: Cypress test
