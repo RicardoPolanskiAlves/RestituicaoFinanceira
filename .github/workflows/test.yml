@@ -1,0 +1,46 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches:
+      - Teste
+
+jobs:
+  cypress-run:
+    runs-on: self-hosted
+    container: cypress/browsers:node12.16.2-chrome81-ff75
+    steps:
+      - name: Add hosts to /etc/hosts
+        run: echo "10.128.132.194 atendimento-api.delphixsit.net" >> /etc/hosts
+
+      - name: Debug hosts
+        run: cat /etc/hosts
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install
+        run: npm init -y && npm install
+
+      - name: Cypress tests
+        run: npx cypress-tags run --browser edge --record TAGS='@CancelarPedido'
+        env:
+        # place your secret record key at
+        # https://github.com/cypress-io/cypress-example-kitchensink/settings/secrets
+        CYPRESS_RECORD_KEY: 394c4a91-885f-4496-9d03-d6508618df61
+        TERM: xterm
+
+      - name: Generate Allure Report
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          allure_results: allure-results
+          allure_history: allure-history
+
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: allure-history
